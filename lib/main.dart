@@ -11,15 +11,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // Application name
       title: 'Flutter Hello World',
+
+      debugShowCheckedModeBanner: false,
       // Application theme data, you can set the colors for the application as
       // you want
 
       initialRoute: "/list",
       routes: {"/list": (BuildContext context) => List()},
 
+      // //configuarar tema
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.cyan,
+          accentColor: Colors.red,
+          //configurar texto
+          textTheme: TextTheme(
+              bodyText2: TextStyle(color: Colors.pink, fontSize: 30))),
       // A widget which will be started on application startup
       //home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
